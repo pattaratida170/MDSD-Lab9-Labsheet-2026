@@ -36,9 +36,8 @@
 
 > ✅ **Checkpoint 1.1** ถ่ายภาพหน้าจอ Firebase Console ที่แสดงหน้า Project Overview ของโปรเจกต์ที่สร้างเสร็จแล้ว
 
-```text
-บันทึกรูปผลลัพธ์ที่นี่
-```
+<img width="2940" height="1912" alt="image" src="https://github.com/user-attachments/assets/81a070af-f254-445a-a17e-8f54c3875e8f" />
+
 
 ### ขั้นตอนที่ 1.2: 🔧 ทำตามขั้นตอน — ติดตั้งเครื่องมือและเชื่อมโปรเจกต์ด้วย FlutterFire CLI
 
@@ -164,10 +163,14 @@ Future<void> main() async {
 
 > ✅ **Checkpoint 2.1** ทดสอบสมัครสมาชิกด้วย Email ใหม่สำเร็จ ถ่ายภาพหน้าจอ Firebase Console เมนู Authentication → Users ที่แสดงบัญชีที่เพิ่งสมัคร จากนั้นทดสอบกรณีผิดพลาด 2 กรณี คือ (ก) สมัครซ้ำด้วย Email เดิม และ (ข) ใส่รหัสผ่านสั้นเกินไป ถ่ายภาพหน้าจอข้อความ Error ทั้งสองกรณี พร้อมอธิบายว่าโค้ดส่วนใดใน `auth_service.dart` เป็นตัวจัดการแต่ละกรณี
 
-```text
-บันทึกรูปผลลัพธ์ที่นี่ และคำอธิบายของแต่ละกรณี
-```
+<img width="2940" height="1912" alt="image" src="https://github.com/user-attachments/assets/48cf7d2d-8211-487b-80f6-c44c035f6e8a" />
+<img width="2940" height="1912" alt="image" src="https://github.com/user-attachments/assets/05c789fa-2e91-4636-99c1-73737b32b124" />
+<img width="2940" height="1912" alt="image" src="https://github.com/user-attachments/assets/4d54d4aa-376f-4573-a05b-a47cd0291a46" />
+<img width="2940" height="1912" alt="image" src="https://github.com/user-attachments/assets/8fabc1c3-9c42-4925-9e26-6f6e88a904f9" />
 
+```bash
+เมธอด signUp() ทำหน้าที่สมัครสมาชิก ส่วน try/catch ใช้ดักจับข้อผิดพลาดจาก Firebase และ _getErrorMessage() ใช้แปลง Error code ให้เป็นข้อความภาษาไทยที่เข้าใจง่าย
+```
 ---
 
 ## ส่วนที่ 3: เข้าสู่ระบบด้วย Google Sign-In
