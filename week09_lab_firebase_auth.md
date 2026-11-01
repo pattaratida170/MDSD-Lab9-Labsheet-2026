@@ -386,10 +386,9 @@ avdmanager list avd
 
 > ✅ **Checkpoint 3.1** ทดสอบกดปุ่มเข้าสู่ระบบด้วย Google ด้วยบัญชี Google จริงของคุณ ถ่ายภาพหน้าจอตอนเลือกบัญชี Google และภาพหน้าจอ Firebase Console ที่แสดงว่ามีผู้ใช้ใหม่ Provider เป็น Google เพิ่มเข้ามา อธิบายว่า `idToken` กับ `accessToken` ที่ได้จาก Google นำไปใช้ทำอะไรต่อในขั้นตอนการยืนยันตัวตนกับ Firebase (อ้างอิงหัวข้อ 9.4)
 
-```text
-บันทึกรูปผลลัพธ์ที่นี่ และคำอธิบาย
-```
+<img width="822" height="1590" alt="image" src="https://github.com/user-attachments/assets/a37682b9-6eeb-41f9-ac17-e2e594f14b64" />
 
+อธิบาย : idToken ใช้ยืนยันตัวตนผู้ใช้ ส่วน accessToken ใช้เข้าถึงบริการของ Google จากนั้นนำ Token ไปสร้าง Credential และส่งให้ Firebase ตรวจสอบด้วย signInWithCredential() เพื่อเข้าสู่ระบบ
 ---
 
 ## ส่วนที่ 4: AuthGate — สลับหน้าจอตามสถานะผู้ใช้
@@ -525,11 +524,11 @@ Widget build(BuildContext context) {
 
 > ✅ **Checkpoint 4.1** ถ่ายภาพหน้าจอ 3 ภาพเรียงกัน คือ (ก) แอปตอนเพิ่งเปิดขึ้นมาครั้งแรกแบบยังไม่ล็อกอิน แสดงหน้า Login (ข) หลังล็อกอินสำเร็จ แอปสลับไปแสดง `MainScaffold` อัตโนมัติโดยไม่ต้องกดอะไรเพิ่ม และ (ค) หลังกด "ออกจากระบบ" แอปสลับกลับไปหน้า Login เอง อธิบายว่าทำไมการใช้ `StreamBuilder` ฟัง `authStateChanges()` จึงทำให้ไม่ต้องเขียนโค้ดสั่ง Navigate ไปมาเอง
 
+<img width="818" height="1610" alt="image" src="https://github.com/user-attachments/assets/4ad6f522-2bcd-4177-afa9-1a19662d1a51" />
+<img width="782" height="1600" alt="image" src="https://github.com/user-attachments/assets/8786c078-94ab-4d80-ac47-997e9f6096a9" />
+<img width="836" height="1568" alt="image" src="https://github.com/user-attachments/assets/a4272bce-047e-4e8d-9f14-013dbf4be7a3" />
 
-```text
-บันทึกรูปผลลัพธ์ที่นี่ (3 ภาพ) และคำอธิบาย
-```
-
+อธิบาย : StreamBuilder จะฟังสถานะการเข้าสู่ระบบจาก Firebase อัตโนมัติ เมื่อ Login หรือ Logout สถานะเปลี่ยน หน้าจอก็จะเปลี่ยนตามทันที จึงไม่ต้องเขียนคำสั่ง Navigate
 ---
 
 ## ส่วนที่ 5: ขยาย Repository Pattern ด้วย ItemRepositoryFirestore
